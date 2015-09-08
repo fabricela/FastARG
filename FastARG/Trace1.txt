@@ -1,0 +1,429 @@
+ARG initialized in: 0 milli seconds
+8 nodes lives with thoses position in ARGnodes vector: 1 2 3 4 5 6 7 8 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(2) Leaf node          - with source node origin 2 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2  2:2  3:2  4:2  5:2  6:2  7:2  8:2  
+(3) Leaf node          - with source node origin 3 and with  mutations position at: 1 2 3 
+   ancestral material position: 
+   Leaf node paths: 1:3  2:3  3:3  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(5) Leaf node          - with source node origin 5 and with  mutations position at: 1 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:5  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(6) Leaf node          - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:6  3:6  4:6  5:6  6:6  7:6  8:6  
+(7) Leaf node          - with source node origin 7 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7  2:7  3:7  4:7  5:7  6:7  7:7  8:7  
+(8) Leaf node          - with source node origin 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:8  2:8  3:8  4:8  5:8  6:8  7:8  8:8  
+
+7 nodes lives with thoses position in ARGnodes vector: 1 2 3 4 5 6 9 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(2) Leaf node          - with source node origin 2 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2  2:2  3:2  4:2  5:2  6:2  7:2  8:2  
+(3) Leaf node          - with source node origin 3 and with  mutations position at: 1 2 3 
+   ancestral material position: 
+   Leaf node paths: 1:3  2:3  3:3  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(5) Leaf node          - with source node origin 5 and with  mutations position at: 1 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:5  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(6) Leaf node          - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:6  3:6  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+
+8 nodes lives with thoses position in ARGnodes vector: 1 2 3 4 5 10 9 11 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(2) Leaf node          - with source node origin 2 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2  2:2  3:2  4:2  5:2  6:2  7:2  8:2  
+(3) Leaf node          - with source node origin 3 and with  mutations position at: 1 2 3 
+   ancestral material position: 
+   Leaf node paths: 1:3  2:3  3:3  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(5) Leaf node          - with source node origin 5 and with  mutations position at: 1 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:5  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+
+9 nodes lives with thoses position in ARGnodes vector: 1 2 3 4 12 10 9 11 13 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(2) Leaf node          - with source node origin 2 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2  2:2  3:2  4:2  5:2  6:2  7:2  8:2  
+(3) Leaf node          - with source node origin 3 and with  mutations position at: 1 2 3 
+   ancestral material position: 
+   Leaf node paths: 1:3  2:3  3:3  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(13) Recombination node - with source node origin 5 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:5  2:  3:  4:  5:  6:  7:  8:  
+
+10 nodes lives with thoses position in ARGnodes vector: 1 2 14 4 12 10 9 11 13 15 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(2) Leaf node          - with source node origin 2 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2  2:2  3:2  4:2  5:2  6:2  7:2  8:2  
+(14) Recombination node - with source node origin 3 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(13) Recombination node - with source node origin 5 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:5  2:  3:  4:  5:  6:  7:  8:  
+(15) Recombination node - with source node origin 3 and with  mutations position at: 1 2 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:3  2:3  3:3  4:  5:  6:  7:  8:  
+
+9 nodes lives with thoses position in ARGnodes vector: 1 16 14 4 12 10 9 11 13 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(16) CoalescenseNode    - with source nodes origin 2 & 15 and with  mutations position at: 1 2 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(14) Recombination node - with source node origin 3 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(13) Recombination node - with source node origin 5 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:5  2:  3:  4:  5:  6:  7:  8:  
+
+9 nodes lives with thoses position in ARGnodes vector: 1 17 14 4 12 10 9 11 13 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(14) Recombination node - with source node origin 3 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:3  5:3  6:3  7:3  8:3  
+(4) Leaf node          - with source node origin 4 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:4  5:4  6:4  7:4  8:4  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(13) Recombination node - with source node origin 5 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:5  2:  3:  4:  5:  6:  7:  8:  
+
+8 nodes lives with thoses position in ARGnodes vector: 1 17 18 12 10 9 11 13 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(18) CoalescenseNode    - with source nodes origin 4 & 14 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(13) Recombination node - with source node origin 5 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:5  2:  3:  4:  5:  6:  7:  8:  
+
+7 nodes lives with thoses position in ARGnodes vector: 1 17 12 10 9 11 19 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(12) Recombination node - with source node origin 5 and with  mutations position at: 3 4 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:5  3:5  4:5  5:5  6:5  7:5  8:5  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(11) Recombination node - with source node origin 6 and with  mutations position at: 
+   ancestral material position: 3 4 5 
+   Leaf node paths: 1:6  2:6  3:6  4:  5:  6:  7:  8:  
+(19) CoalescenseNode    - with source nodes origin 13 & 18 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4-5  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+6 nodes lives with thoses position in ARGnodes vector: 1 17 10 9 20 19 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(9) CoalescenseNode    - with source nodes origin 7 & 8 and with  mutations position at: 3 5 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(19) CoalescenseNode    - with source nodes origin 13 & 18 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4-5  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+6 nodes lives with thoses position in ARGnodes vector: 1 17 10 21 20 19 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(10) Recombination node - with source node origin 6 and with  mutations position at: 3 
+   ancestral material position: 1 2 
+   Leaf node paths: 1:  2:  3:  4:6  5:6  6:6  7:6  8:6  
+(21) Mutation node      - with source node origin 9 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:7-8  5:7-8  6:7-8  7:7-8  8:7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(19) CoalescenseNode    - with source nodes origin 13 & 18 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4-5  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+5 nodes lives with thoses position in ARGnodes vector: 1 17 22 20 19 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(19) CoalescenseNode    - with source nodes origin 13 & 18 and with  mutations position at: 1 3 
+   ancestral material position: 
+   Leaf node paths: 1:4-5  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+6 nodes lives with thoses position in ARGnodes vector: 1 17 22 20 23 24 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(17) Mutation node      - with source node origin 16 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(23) Recombination node - with source node origin 19 and with  mutations position at: 3 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+(24) Recombination node - with source node origin 19 and with  mutations position at: 1 
+   ancestral material position: 2 3 4 5 
+   Leaf node paths: 1:4-5  2:  3:  4:  5:  6:  7:  8:  
+
+5 nodes lives with thoses position in ARGnodes vector: 1 25 22 20 23 
+(1) Leaf node          - with source node origin 1 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1  2:1  3:1  4:1  5:1  6:1  7:1  8:1  
+(25) CoalescenseNode    - with source nodes origin 17 & 24 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:2-3-4-5  2:2-3  3:2-3  4:2  5:2  6:2  7:2  8:2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(23) Recombination node - with source node origin 19 and with  mutations position at: 3 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+4 nodes lives with thoses position in ARGnodes vector: 26 22 20 23 
+(26) CoalescenseNode    - with source nodes origin 1 & 25 and with  mutations position at: 1 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(23) Recombination node - with source node origin 19 and with  mutations position at: 3 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+4 nodes lives with thoses position in ARGnodes vector: 27 22 20 23 
+(27) Mutation node      - with source node origin 26 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(20) CoalescenseNode    - with source nodes origin 11 & 12 and with  mutations position at: 3 4 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(23) Recombination node - with source node origin 19 and with  mutations position at: 3 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+4 nodes lives with thoses position in ARGnodes vector: 27 22 28 23 
+(27) Mutation node      - with source node origin 26 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(28) Mutation node      - with source node origin 20 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:5-6  3:5-6  4:5  5:5  6:5  7:5  8:5  
+(23) Recombination node - with source node origin 19 and with  mutations position at: 3 
+   ancestral material position: 1 
+   Leaf node paths: 1:  2:4  3:4  4:3-4  5:3-4  6:3-4  7:3-4  8:3-4  
+
+3 nodes lives with thoses position in ARGnodes vector: 27 22 29 
+(27) Mutation node      - with source node origin 26 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(22) CoalescenseNode    - with source nodes origin 10 & 21 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:7-8  2:7-8  3:7-8  4:6-7-8  5:6-7-8  6:6-7-8  7:6-7-8  8:6-7-8  
+(29) CoalescenseNode    - with source nodes origin 23 & 28 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:6  2:4-5-6  3:4-5-6  4:3-4-5  5:3-4-5  6:3-4-5  7:3-4-5  8:3-4-5  
+
+2 nodes lives with thoses position in ARGnodes vector: 27 30 
+(27) Mutation node      - with source node origin 26 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(30) CoalescenseNode    - with source nodes origin 22 & 29 and with  mutations position at: 3 
+   ancestral material position: 
+   Leaf node paths: 1:6-7-8  2:4-5-6-7-8  3:4-5-6-7-8  4:3-4-5-6-7-8  5:3-4-5-6-7-8  6:3-4-5-6-7-8  7:3-4-5-6-7-8  8:3-4-5-6-7-8  
+
+2 nodes lives with thoses position in ARGnodes vector: 27 31 
+(27) Mutation node      - with source node origin 26 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5  2:1-2-3  3:1-2-3  4:1-2  5:1-2  6:1-2  7:1-2  8:1-2  
+(31) Mutation node      - with source node origin 30 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:6-7-8  2:4-5-6-7-8  3:4-5-6-7-8  4:3-4-5-6-7-8  5:3-4-5-6-7-8  6:3-4-5-6-7-8  7:3-4-5-6-7-8  8:3-4-5-6-7-8  
+
+1 nodes lives with thoses position in ARGnodes vector: 32 
+(32) CoalescenseNode    - with source nodes origin 27 & 31 and with  mutations position at: 
+   ancestral material position: 
+   Leaf node paths: 1:1-2-3-4-5-6-7-8  2:1-2-3-4-5-6-7-8  3:1-2-3-4-5-6-7-8  4:1-2-3-4-5-6-7-8  5:1-2-3-4-5-6-7-8  6:1-2-3-4-5-6-7-8  7:1-2-3-4-5-6-7-8  8:1-2-3-4-5-6-7-8  
+
+ARG generated in: 182 milli seconds
+This ARG has 0 lives nodes.
+ List of leaf position with the TIM: 4 5 6 
+ List of cases in sample IDs: 2 3 
+Numbers Of match by position:
+1: 31
+2: 43
+3: 43
+4: 33
+5: 33
+6: 33
+7: 33
+8: 33
+Statistics generated in: 0 milliseconds
+
+
+EXECUTION SUCESSFUL, NO ERRORS DETECTED!

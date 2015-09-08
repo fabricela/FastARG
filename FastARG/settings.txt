@@ -1,0 +1,20 @@
+GCC c++ compiler :
+ALL options :
+-D__GXX_EXPERIMENTAL_CXX0X__ -D__cplusplus=201103L -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11
+
+other flags :
+-c -fmessage-length=0 -std=c++11
+
+Preprocessor definied Symbols :
+_GLIBCXX_USE_C99_STDINT_TR1
+__GXX_EXPERIMENTAL_CXX0X__
+__cplusplus=201103L
+
+GCC C compiler
+ALL options:
+-O0 -g3 -Wall -c -fmessage-length=0 -std=gnu11
+
+other flags
+-c -fmessage-length=0 -std=gnu11
+
+${COMMAND} ${FLAGS} -E -P -v -dD std=c++11 "${INPUTS}"

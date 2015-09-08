@@ -1,0 +1,42 @@
+ARG initialized in: 0 milli seconds
+Found a coalescense between node 7 and 8
+Mutation for node 3 for mutation position: 1.
+Recombination event with point: 1 at node:9.
+Found a coalescense between node 6 and 12
+Mutation for node 5 for mutation position: 1.
+Mutation for node 2 for mutation position: 1.
+Mutation for node 13 for mutation position: 3.
+Mutation for node 11 for mutation position: 5.
+Found a coalescense between node 16 and 17
+Recombination event with point: 1 at node:10.
+Found a coalescense between node 18 and 19
+Mutation for node 14 for mutation position: 3.
+Mutation for node 15 for mutation position: 2.
+Found a coalescense between node 21 and 23
+Mutation for node 1 for mutation position: 1.
+Found a coalescense between node 25 and 24
+Mutation for node 20 for mutation position: 2.
+Mutation for node 22 for mutation position: 4.
+Found a coalescense between node 28 and 26
+Mutation for node 27 for mutation position: 3.
+Found a coalescense between node 30 and 29
+Mutation for node 4 for mutation position: 1.
+Mutation for node 32 for mutation position: 3.
+Found a coalescense between node 33 and 31
+ARG generated in: 4 milli seconds
+This ARG has 1 lives nodes.
+ List of leaf position with the TIM: 4 5 6 
+ List of cases in sample IDs: 2 3 
+Numbers Of match by position:
+1: 22
+2: 22
+3: 22
+4: 22
+5: 22
+6: 22
+7: 22
+8: 22
+Statistics generated in: 0 milliseconds
+
+
+EXECUTION SUCESSFUL, NO ERRORS DETECTED!
