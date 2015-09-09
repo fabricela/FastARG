@@ -1,1 +1,17 @@
 Questions 
+Je comprends que le nombre de mutations à partir d'une feuille au MRCA est égal au nombre de mutations en sommant sur les arbres partiels des SNPS. Mais je ne comprends toujours pas  le raisonnement sur le nombre de mutations total dans un graphe. Il est variable non?
+Considérons, par exemple
+
+4 mutations  2 mutations  3 mutations     
+   000           000         000
+  /  \            |           |
+000  000         100         100
+ |    |           |          /  \
+100  100         101       100  100
+ |    |         /  \        |    |
+101  101      101   101    101  101
+
+Qu-est ce que je ne comprends pas?
+
+
+Cliquer sur le petit crayon pour éditer, puis à la fin choisissez "Commit directly to the master branch"!
