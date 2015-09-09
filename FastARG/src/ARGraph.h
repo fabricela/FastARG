@@ -17,10 +17,13 @@ public:
 
 	std::vector<SNPSequence> dataSequences;
 	std::vector<ARGnode> ARGnodes;
+	unsigned short int distanceBetweenMarquers;
+
 	std::vector<unsigned short int> positionOfLiveNodes;
 	std::vector<unsigned short int> leafPositionWithTheTIM;
 	std::vector<unsigned short int> sampleIDThatAreCases;
 	std::vector<int> statistics;
+
 
 	// Constructors
 	ARGraph(const std::vector<SNPSequence>& dataSequences,unsigned short int,unsigned short int);

@@ -32,9 +32,15 @@ unsigned short int ARGnode::sizeOfSample = SIZEOFSAMPLE;
 using std::cout;
 using std::endl;
 
+enum class numberOfTIMPresent  {ZERO,ONE};
 int main() {
 	//testExample();
-	 testExample2();
+	 //testExample2();
+	numberOfTIMPresent arrayOfTIMPresentByPosition [200];
+	//arrayOfTIMPresentByPosition[0] = numberOfTIMPresent::ONE;
+	char arrayOfTIMPresentByPositionChar [200];
+	cout << "Bytes size for enum class: "  << sizeof(arrayOfTIMPresentByPosition) << endl;
+	cout << "Bytes size for chars: "  << sizeof(arrayOfTIMPresentByPositionChar) << endl;
 
 	/*
 	auto startTime = Clock::now();
