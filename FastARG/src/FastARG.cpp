@@ -26,13 +26,16 @@ typedef std::chrono::high_resolution_clock Clock;
 
 void testExample();
 void testExample2();
-
+void testShuffle();
 unsigned short int ARGnode::sizeOfSequence = SIZEOFSEQUENCE;
 unsigned short int ARGnode::sizeOfSample = SIZEOFSAMPLE;
+using std::cout;
+using std::endl;
 
 int main() {
 	//testExample();
-	testExample2();
+	 testExample2();
+
 	/*
 	auto startTime = Clock::now();
 	auto endTime = Clock::now();
@@ -108,5 +111,16 @@ void testExample2(){
 	aARGraph.randomArgGenerator();
 	aARGraph.printARGSummary();
 	aARGraph.generateStatisticData();
+}
+
+void testShuffle(){
+	std::vector<int> vector;
+	for (auto i = 1 ; i <= 10 ;++i){
+		vector.push_back(i);
+	}
+	std::random_shuffle(vector.begin(),vector.end());
+	for (const auto &i : vector){
+		cout<< i << ' ';
+	}
 }
 
