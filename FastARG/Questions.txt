@@ -1,4 +1,4 @@
-Questions 
+-Questions 
 Je comprends que le nombre de mutations à partir d'une feuille au MRCA est égal au nombre de mutations en sommant sur les arbres partiels des SNPS. Mais je ne comprends toujours pas  le raisonnement sur le nombre de mutations total dans un graphe. Il est variable non?
 Considérons, par exemple
 
