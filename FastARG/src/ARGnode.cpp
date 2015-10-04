@@ -12,7 +12,7 @@
 #include <limits>
 #include <algorithm>
 
-// Constructors
+
 /*********************************************************************************************/
 /**                                   LEAF NODE CONSTRUCTOR                                 **/
 /*********************************************************************************************/
@@ -31,12 +31,12 @@ ARGnode::ARGnode( std::vector<unsigned short int> mutationPositionList , unsigne
 	}
 #endif
 	this->typeOfNode =  ARGNodeType::LEAFSAMPLEMODE;
-	this->mutationPositionList = mutationPositionList;
+	this->listOFSNPPositions = mutationPositionList;
 	this->positionOfDataSource = positionOfTheNodeInData;
 	this->secondDataPoint = std::numeric_limits<unsigned short int>::max();
 	vectorFor1PositionOfTheTim.push_back(positionOfTheNodeInData);
 	for (unsigned short int i = 0 ; i < 2*this->sizeOfSequence-2 ; ++i){
-		this->listOfLeafPositionForTIM.push_back(vectorFor1PositionOfTheTim);
+		this->listOfLeafReachabilityForATIM.push_back(vectorFor1PositionOfTheTim);
 	}
 }
 
@@ -45,22 +45,22 @@ ARGnode::ARGnode( std::vector<unsigned short int> mutationPositionList , unsigne
 /*********************************************************************************************/
 ARGnode::ARGnode( unsigned short int positionOfSourceNode,	unsigned short int positionOfTheMutation , const std::vector<ARGnode>& ARGData ){
 	std::vector<unsigned short int>::iterator it;
-	std::find(ARGData.at(positionOfSourceNode).mutationPositionList.begin() , ARGData.at(positionOfSourceNode).mutationPositionList.end() , positionOfTheMutation);
+	std::find(ARGData.at(positionOfSourceNode).listOFSNPPositions.begin() , ARGData.at(positionOfSourceNode).listOFSNPPositions.end() , positionOfTheMutation);
 
 	bool mutationPositionPresent = false;
 	unsigned short int elementValue;
 
-	for (unsigned short int i = 0 ; i < ARGData.at(positionOfSourceNode).mutationPositionList.size() ;++i){
-		elementValue = ARGData.at(positionOfSourceNode).mutationPositionList.at(i);
+	for (unsigned short int i = 0 ; i < ARGData.at(positionOfSourceNode).listOFSNPPositions.size() ;++i){
+		elementValue = ARGData.at(positionOfSourceNode).listOFSNPPositions.at(i);
 		if (elementValue != positionOfTheMutation){
-			this->mutationPositionList.push_back(elementValue);
+			this->listOFSNPPositions.push_back(elementValue);
 		}else{
 			mutationPositionPresent = true;
 		}
 	}
 
 #ifdef VALIDATION
-	if (this->mutationPositionList.size() != ARGData.at(positionOfSourceNode).mutationPositionList.size()-1  || !mutationPositionPresent){
+	if (this->listOFSNPPositions.size() != ARGData.at(positionOfSourceNode).listOFSNPPositions.size()-1  || !mutationPositionPresent){
 		std::cerr << "the mutation position " << positionOfTheMutation << " for the node " << positionOfSourceNode << " is absent." << std::endl;
 		std::cerr << "this->mutationPositionList.size() != ARGData.at(positionOfSourceNode).mutationPositionList.size()-1  || !mutationPositionPresent inARGnode::ARGnode ";
 		throw  "this->mutationPositionList.size() != ARGData.at(positionOfSourceNode).mutationPositionList.size()-1  || !mutationPositionPresent inARGnode::ARGnode ";
@@ -68,10 +68,10 @@ ARGnode::ARGnode( unsigned short int positionOfSourceNode,	unsigned short int po
 #endif
 
 	this->typeOfNode = ARGNodeType::MUTATIONODE;
-	this->ancestralMaterialPositionList = ARGData.at(positionOfSourceNode).ancestralMaterialPositionList;
+	this->nonAncestralMaterialPositionList = ARGData.at(positionOfSourceNode).nonAncestralMaterialPositionList;
 	this->positionOfDataSource = positionOfSourceNode;
 	this->secondDataPoint = positionOfTheMutation;
-	this->listOfLeafPositionForTIM = ARGData.at(positionOfSourceNode).listOfLeafPositionForTIM;
+	this->listOfLeafReachabilityForATIM = ARGData.at(positionOfSourceNode).listOfLeafReachabilityForATIM;
 }
 
 /*********************************************************************************************/
@@ -84,23 +84,23 @@ ARGnode::ARGnode( unsigned short int positionOfSourceNode , const std::vector<AR
 
 #endif
 
-	std::set_intersection( ARGData.at(positionOfSourceNode).ancestralMaterialPositionList.begin(), ARGData.at(positionOfSourceNode).ancestralMaterialPositionList.end(),
-			ARGData.at(positionOfTheSecondSouceNode).ancestralMaterialPositionList.begin(),ARGData.at(positionOfTheSecondSouceNode).ancestralMaterialPositionList.end(),
-			std::back_inserter(this->ancestralMaterialPositionList));
+	std::set_intersection( ARGData.at(positionOfSourceNode).nonAncestralMaterialPositionList.begin(), ARGData.at(positionOfSourceNode).nonAncestralMaterialPositionList.end(),
+			ARGData.at(positionOfTheSecondSouceNode).nonAncestralMaterialPositionList.begin(),ARGData.at(positionOfTheSecondSouceNode).nonAncestralMaterialPositionList.end(),
+			std::back_inserter(this->nonAncestralMaterialPositionList));
 
-	std::set_union(ARGData.at(positionOfSourceNode).mutationPositionList.begin(),ARGData.at(positionOfSourceNode).mutationPositionList.end(),
-			ARGData.at(positionOfTheSecondSouceNode).mutationPositionList.begin(),ARGData.at(positionOfTheSecondSouceNode).mutationPositionList.end(),
-			std::back_inserter(this->mutationPositionList));
+	std::set_union(ARGData.at(positionOfSourceNode).listOFSNPPositions.begin(),ARGData.at(positionOfSourceNode).listOFSNPPositions.end(),
+			ARGData.at(positionOfTheSecondSouceNode).listOFSNPPositions.begin(),ARGData.at(positionOfTheSecondSouceNode).listOFSNPPositions.end(),
+			std::back_inserter(this->listOFSNPPositions));
 
 	this->typeOfNode = ARGNodeType::COALESCENSENODE;
 	this->positionOfDataSource = positionOfSourceNode;
 	this->secondDataPoint = positionOfTheSecondSouceNode;
 
 	for (unsigned short int i = 0 ; i < 2*this->sizeOfSequence-2 ; ++i ){ // HIGH COST FOR THIS! CHECK FOR OPTIMIZATION SEMANTICS !!!!!!!!!!
-		std::set_union(ARGData.at(positionOfSourceNode).listOfLeafPositionForTIM.at(i).begin() , ARGData.at(positionOfSourceNode).listOfLeafPositionForTIM.at(i).end(),
-				ARGData.at(positionOfTheSecondSouceNode).listOfLeafPositionForTIM.at(i).begin() , ARGData.at(positionOfTheSecondSouceNode).listOfLeafPositionForTIM.at(i).end(),
+		std::set_union(ARGData.at(positionOfSourceNode).listOfLeafReachabilityForATIM.at(i).begin() , ARGData.at(positionOfSourceNode).listOfLeafReachabilityForATIM.at(i).end(),
+				ARGData.at(positionOfTheSecondSouceNode).listOfLeafReachabilityForATIM.at(i).begin() , ARGData.at(positionOfTheSecondSouceNode).listOfLeafReachabilityForATIM.at(i).end(),
 				std::back_inserter(resultVectorForLeafReach));
-		this->listOfLeafPositionForTIM.push_back(resultVectorForLeafReach);
+		this->listOfLeafReachabilityForATIM.push_back(resultVectorForLeafReach);
 		resultVectorForLeafReach.clear();
 	}
 }
@@ -140,22 +140,22 @@ ARGnode::ARGnode( unsigned short int positionOfSourceNode , unsigned short int p
 	}
 
 	std::set_union(tempAncestralMaterialPositionList.begin(), tempAncestralMaterialPositionList.end(),
-			ARGData.at(positionOfSourceNode).ancestralMaterialPositionList.begin(), ARGData.at(positionOfSourceNode).ancestralMaterialPositionList.end(),
-			std::back_inserter(this->ancestralMaterialPositionList));
+			ARGData.at(positionOfSourceNode).nonAncestralMaterialPositionList.begin(), ARGData.at(positionOfSourceNode).nonAncestralMaterialPositionList.end(),
+			std::back_inserter(this->nonAncestralMaterialPositionList));
 
-	std::set_difference(ARGData.at(positionOfSourceNode).mutationPositionList.begin() , ARGData.at(positionOfSourceNode).mutationPositionList.end(), // Source mutation
+	std::set_difference(ARGData.at(positionOfSourceNode).listOFSNPPositions.begin() , ARGData.at(positionOfSourceNode).listOFSNPPositions.end(), // Source mutation
 			tempAncestralMaterialPositionList.begin(),tempAncestralMaterialPositionList.end(),                                                   // minus new ancestral positions
-			std::inserter( this->mutationPositionList , this->mutationPositionList.begin()) );                                                   // in mutations position list
+			std::inserter( this->listOFSNPPositions , this->listOFSNPPositions.begin()) );                                                   // in mutations position list
 
 #ifdef VALIDATION
-	if ( this->ancestralMaterialPositionList.size() == this->sizeOfSequence){
+	if ( this->nonAncestralMaterialPositionList.size() == this->sizeOfSequence){
 		std::cerr << "Cant recombinate to form an complete unknown node" << std::endl;
-		std::cerr << "this->ancestralMaterialPositionList.size() == this->sizeOfSequence in ARGnode::ARGnode";
-		if (this->mutationPositionList.size() != 0){
+		std::cerr << "this->nonAncestralMaterialPositionList.size() == this->sizeOfSequence in ARGnode::ARGnode";
+		if (this->listOFSNPPositions.size() != 0){
 			std::cerr <<"Serious problem!!!"; // It means that all the material is ancestral but there is still mutations. Normaly this cnat be simulated.
 			throw "Serious problem!!! in ARGnode::ARGnode"; // IF this error happens you need to debug IMMEDIALTLY!!
 		}
-		throw "this->ancestralMaterialPositionList.size() == this->sizeOfSequence in ARGnode::ARGnode";
+		throw "this->nonAncestralMaterialPositionList.size() == this->sizeOfSequence in ARGnode::ARGnode";
 	}
 #endif
 
@@ -166,17 +166,17 @@ ARGnode::ARGnode( unsigned short int positionOfSourceNode , unsigned short int p
 	std::vector<unsigned short int> emptyVector;
 	if(trueForleftSideIsAncestralMateriel){
 		for ( unsigned short int i = 0 ; i < 2*this->secondDataPoint-1; ++i){
-			this->listOfLeafPositionForTIM.push_back(emptyVector);
+			this->listOfLeafReachabilityForATIM.push_back(emptyVector);
 		}
 		for ( unsigned short int i = 2*this->secondDataPoint-1; i < 2*this->sizeOfSequence-2;++i){
-			this->listOfLeafPositionForTIM.push_back(ARGData.at(positionOfSourceNode).listOfLeafPositionForTIM.at(i));
+			this->listOfLeafReachabilityForATIM.push_back(ARGData.at(positionOfSourceNode).listOfLeafReachabilityForATIM.at(i));
 		}
 	}else{
 		for ( unsigned short int i = 0 ; i < 2*this->secondDataPoint-1; ++i){
-			this->listOfLeafPositionForTIM.push_back(ARGData.at(positionOfSourceNode).listOfLeafPositionForTIM.at(i));
+			this->listOfLeafReachabilityForATIM.push_back(ARGData.at(positionOfSourceNode).listOfLeafReachabilityForATIM.at(i));
 		}
 		for ( unsigned short int i = 2*this->secondDataPoint-1; i < 2*this->sizeOfSequence-2;++i){
-			this->listOfLeafPositionForTIM.push_back(emptyVector);
+			this->listOfLeafReachabilityForATIM.push_back(emptyVector);
 		}
 	}
 }
@@ -207,21 +207,21 @@ std::ostream& operator << (std::ostream & out, const ARGnode & aNode){
 	}
 
 	out << " mutations position at: ";
-	for (const auto &i : aNode.mutationPositionList){
+	for (const auto &i : aNode.listOFSNPPositions){
 		out << i << ' ';
 	}
 	out << std:: endl;
 	out << "   ancestral material position: ";
-	for (const auto &i: aNode.ancestralMaterialPositionList){
+	for (const auto &i: aNode.nonAncestralMaterialPositionList){
 		out << i << ' ';
 	}
 	out << std:: endl;
 	out << "   Leaf node paths: ";
-	for (unsigned short int i = 0 ; i < aNode.listOfLeafPositionForTIM.size() ;++i){
+	for (unsigned short int i = 0 ; i < aNode.listOfLeafReachabilityForATIM.size() ;++i){
 		out << i+1 << ":";
-		for(unsigned short int j = 0 ; j < aNode.listOfLeafPositionForTIM.at(i).size() ; ++j){
-			out << aNode.listOfLeafPositionForTIM.at(i).at(j)+1;
-			if (j < aNode.listOfLeafPositionForTIM.at(i).size() -1 ){
+		for(unsigned short int j = 0 ; j < aNode.listOfLeafReachabilityForATIM.at(i).size() ; ++j){
+			out << aNode.listOfLeafReachabilityForATIM.at(i).at(j)+1;
+			if (j < aNode.listOfLeafReachabilityForATIM.at(i).size() -1 ){
 				out<< '-';
 			}
 		}

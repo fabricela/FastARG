@@ -14,15 +14,16 @@ class ARGraph {
 public:
 	unsigned short int sizeOfSequence;
 	unsigned short int sizeOfSample;
+	float sumOfDistancesBetweenMarquers[];
+	char numberOfTIMBySampleForASampleID[];
 
-	std::vector<SNPSequence> dataSequences;
-	std::vector<ARGnode> ARGnodes;
-	unsigned short int distanceBetweenMarquers;
-
-	std::vector<unsigned short int> positionOfLiveNodes;
 	std::vector<unsigned short int> leafPositionWithTheTIM;
 	std::vector<unsigned short int> sampleIDThatAreCases;
-	std::vector<int> statistics;
+
+	std::vector<unsigned short int> positionOfLiveNodes;
+	std::vector<SNPSequence> dataSequences;
+	std::vector<ARGnode> ARGnodes;
+	std::vector<long double> statistics;
 
 
 	// Constructors

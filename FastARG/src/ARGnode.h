@@ -21,9 +21,9 @@ public:
 	unsigned short int positionOfDataSource;
 	unsigned short int secondDataPoint;
 	ARGNodeType typeOfNode;
-	std::vector<unsigned short int> mutationPositionList;
-	std::vector<unsigned short int> ancestralMaterialPositionList;
-	std::vector<std::vector<unsigned short int>> listOfLeafPositionForTIM; //2*SIZEOFSEQUENCE-2,std::vector<unsigned short int>(SIZEOFSAMPLE) );
+	std::vector<unsigned short int> listOFSNPPositions;
+	std::vector<unsigned short int> nonAncestralMaterialPositionList;
+	std::vector<std::vector<unsigned short int>> listOfLeafReachabilityForATIM; //2*SIZEOFSEQUENCE-2,std::vector<unsigned short int>(SIZEOFSAMPLE) );
 
 
 	// Constructors

@@ -3,6 +3,7 @@
  *
  *  Created on: 2015-09-05
  *      Author: Éric Marcotte
+ *
  */
 
 #include "ARGraph.h"
@@ -27,8 +28,8 @@ ARGraph::ARGraph(const std::vector<SNPSequence>& dataSequences,unsigned short in
 	std::cout << "dataSeq:" << std::endl;
 	for(unsigned int i = 0 ; i < this->dataSequences.size();++i ){
 		std::cout << i << ":";
-		for (unsigned short int j = 0 ; j< this->dataSequences.at(i).mutationPositionList.size() ;++j){
-			std::cout << this->dataSequences.at(i).mutationPositionList.at(j) << ' ';
+		for (unsigned short int j = 0 ; j< this->dataSequences.at(i).listOFSNPPositions.size() ;++j){
+			std::cout << this->dataSequences.at(i).listOFSNPPositions.at(j) << ' ';
 		}
 		std::cout << std::endl;
 	}
@@ -116,13 +117,13 @@ void ARGraph::generateACoalescentEvent(unsigned short int firstSourceNode , unsi
 
 #ifdef VALIDATION
 	// Check if this computation is necessary or suffisant.
-	std::set_symmetric_difference(this->ARGnodes.at(firstSourceNode).mutationPositionList.begin() , this->ARGnodes.at(firstSourceNode).mutationPositionList.end(),
-			this->ARGnodes.at(secondSourceNode).mutationPositionList.begin() , this->ARGnodes.at(secondSourceNode).mutationPositionList.end(),
+	std::set_symmetric_difference(this->ARGnodes.at(firstSourceNode).listOFSNPPositions.begin() , this->ARGnodes.at(firstSourceNode).listOFSNPPositions.end(),
+			this->ARGnodes.at(secondSourceNode).listOFSNPPositions.begin() , this->ARGnodes.at(secondSourceNode).listOFSNPPositions.end(),
 			std::back_inserter(resultOfSetSymmetricDifference));
 
 
-	std::set_union( this->ARGnodes.at(firstSourceNode).ancestralMaterialPositionList.begin() , this->ARGnodes.at(firstSourceNode).ancestralMaterialPositionList.end(),
-			this->ARGnodes.at(secondSourceNode).ancestralMaterialPositionList.begin()  , this->ARGnodes.at(secondSourceNode).ancestralMaterialPositionList.end(),
+	std::set_union( this->ARGnodes.at(firstSourceNode).nonAncestralMaterialPositionList.begin() , this->ARGnodes.at(firstSourceNode).nonAncestralMaterialPositionList.end(),
+			this->ARGnodes.at(secondSourceNode).nonAncestralMaterialPositionList.begin()  , this->ARGnodes.at(secondSourceNode).nonAncestralMaterialPositionList.end(),
 			std::back_inserter(resultOfSetUnion));
 
 	std::set_difference(resultOfSetSymmetricDifference.begin(), resultOfSetSymmetricDifference.end(),
@@ -275,7 +276,7 @@ void ARGraph::generateStatisticData() {
 
 	for (unsigned short int i = 0 ; i < 2*this->sizeOfSequence-2;++i){
 		for(unsigned short int j = 0; j < this->ARGnodes.size()-1 ;++j ){
-			std::set_intersection(this->ARGnodes.at(j).listOfLeafPositionForTIM.at(i).begin(), this->ARGnodes.at(j).listOfLeafPositionForTIM.at(i).end(),
+			std::set_intersection(this->ARGnodes.at(j).listOfLeafReachabilityForATIM.at(i).begin(), this->ARGnodes.at(j).listOfLeafReachabilityForATIM.at(i).end(),
 					this->leafPositionWithTheTIM.begin(),this->leafPositionWithTheTIM.end(),
 					std::back_inserter(intersection));
 			numberOfmatch += intersection.size()*intersection.size();
@@ -303,22 +304,22 @@ bool ARGraph::generateARandomCoalescentEvent() {
 
 	for (unsigned short int i = 0 ; i < this->positionOfLiveNodes.size()-1 ;++i){
 		for (unsigned short int j = i+1 ; j < this->positionOfLiveNodes.size() ;++j){
-			if( this->ARGnodes.at(this->positionOfLiveNodes.at(i)).mutationPositionList.size() ==
-					this->ARGnodes.at(this->positionOfLiveNodes.at(j)).mutationPositionList.size()) {
+			if( this->ARGnodes.at(this->positionOfLiveNodes.at(i)).listOFSNPPositions.size() ==
+					this->ARGnodes.at(this->positionOfLiveNodes.at(j)).listOFSNPPositions.size()) {
 
 				std::set_symmetric_difference(
-						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).mutationPositionList.begin(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).mutationPositionList.end(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).mutationPositionList.begin(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).mutationPositionList.end(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).listOFSNPPositions.begin(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).listOFSNPPositions.end(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).listOFSNPPositions.begin(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).listOFSNPPositions.end(),
 						std::back_inserter(resultOfSetSymmetricDifference));
 
 
 				std::set_union(
-						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).ancestralMaterialPositionList.begin(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).ancestralMaterialPositionList.end(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).ancestralMaterialPositionList.begin(),
-						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).ancestralMaterialPositionList.end(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).nonAncestralMaterialPositionList.begin(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(i)).nonAncestralMaterialPositionList.end(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).nonAncestralMaterialPositionList.begin(),
+						this->ARGnodes.at(this->positionOfLiveNodes.at(j)).nonAncestralMaterialPositionList.end(),
 						std::back_inserter(resultOfSetUnion));
 
 				std::set_difference(
@@ -378,7 +379,7 @@ void ARGraph::randomArgGenerator() {
 	*/
 
 	while ( ( this->positionOfLiveNodes.size() != 1) ||
-			(this->ARGnodes.at(this->positionOfLiveNodes.at(0)).mutationPositionList.size() != 0) ){
+			(this->ARGnodes.at(this->positionOfLiveNodes.at(0)).listOFSNPPositions.size() != 0) ){
 
 		std::random_shuffle( this->positionOfLiveNodes.begin(),this->positionOfLiveNodes.end());
 		generateARandomCoalescentEvent();
@@ -440,13 +441,13 @@ bool ARGraph::generateARandomMutationEvent() {
 
 	int randomNode = dist(eng);
 	int randomMutation;
-	int numberOfMutationForTheRandomNode = this->ARGnodes.at(this->positionOfLiveNodes.at(randomNode)).mutationPositionList.size();
+	int numberOfMutationForTheRandomNode = this->ARGnodes.at(this->positionOfLiveNodes.at(randomNode)).listOFSNPPositions.size();
 	int mutation;
 	if ( numberOfMutationForTheRandomNode != 0){
 
 		std::uniform_int_distribution<> dist2(1,  numberOfMutationForTheRandomNode );
 		randomMutation = dist2(eng);
-		mutation =  this->ARGnodes.at(this->positionOfLiveNodes.at(randomNode)).mutationPositionList.at(randomMutation-1);
+		mutation =  this->ARGnodes.at(this->positionOfLiveNodes.at(randomNode)).listOFSNPPositions.at(randomMutation-1);
 
 		std::cout << "Mutation for node " << this->positionOfLiveNodes.at(randomNode)+1 << " for mutation position: "
 				<< mutation  << "."<< std::endl;
@@ -464,7 +465,7 @@ bool ARGraph::generateARandomRecombinationEvent() {
 	std::uniform_int_distribution<> dist(0, (this->positionOfLiveNodes.size()-1));
 
 	int randomNode = this->positionOfLiveNodes.at(dist(eng));
-	if (this->ARGnodes.at(randomNode).mutationPositionList.size() < 2 ){
+	if (this->ARGnodes.at(randomNode).listOFSNPPositions.size() < 2 ){
 		return false;
 	}else{
 		std::uniform_int_distribution<> dist2( 1, this->sizeOfSequence-1);

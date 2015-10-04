@@ -18,6 +18,7 @@
 #include <random>
 #include <vector>
 #include <chrono>
+#include <bitset>
 #include "Fonctions.h"
 #include "SNPSequence.h"
 #include "ARGraph.h"
@@ -34,13 +35,9 @@ using std::endl;
 
 enum class numberOfTIMPresent  {ZERO,ONE};
 int main() {
-	//testExample();
-	 //testExample2();
-	numberOfTIMPresent arrayOfTIMPresentByPosition [200];
-	//arrayOfTIMPresentByPosition[0] = numberOfTIMPresent::ONE;
-	char arrayOfTIMPresentByPositionChar [200];
-	cout << "Bytes size for enum class: "  << sizeof(arrayOfTIMPresentByPosition) << endl;
-	cout << "Bytes size for chars: "  << sizeof(arrayOfTIMPresentByPositionChar) << endl;
+
+	testExample();
+	//testExample2();
 
 	/*
 	auto startTime = Clock::now();
