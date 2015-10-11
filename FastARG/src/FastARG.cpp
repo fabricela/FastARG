@@ -2,7 +2,7 @@
 // Name        : FastARG.cpp
 // Author      : Eric Marcotte
 // Version     :
-// Copyright   :
+// Copyright   : Eric Marcotte
 // Description :
 //============================================================================
 
