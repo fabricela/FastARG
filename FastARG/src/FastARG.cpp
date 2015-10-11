@@ -3,7 +3,7 @@
 // Author      : Eric Marcotte
 // Version     :
 // Copyright   :
-// Description :
+// Description : Ancestral recombination graph genereator.
 //============================================================================
 
 #define nameOfDataFile     "Example.dat"
