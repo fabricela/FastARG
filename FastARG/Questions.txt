@@ -16,3 +16,6 @@ Qu-est ce que je ne comprends pas?
 
 
 Cliquer sur le petit crayon pour éditer, puis à la fin choisissez "Commit directly to the master branch"!
+
+
+-> (Fabrice). Je pense que tu oublie le fait que les mutations sont non récurrentes, donc ton premier exemple est impossible: la mutation au marqueur 3 ne peut pas se produire deux fois. Est-ce que cela t'éclaire ?
